@@ -17,7 +17,6 @@ add_custom_target(copy-scripts
 add_custom_target(build-luajit
     COMMAND make -C ${CMAKE_SOURCE_DIR}/ext/LuaJIT/src -j24
     COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/ext/LuaJIT/src/libluajit.* ${CMAKE_BINARY_DIR}
-    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/ext/LuaJIT/src/lua.hpp ${CMAKE_SOURCE_DIR}/src
 )
 
 add_library(libluajit.a STATIC IMPORTED)
